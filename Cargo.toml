@@ -11,3 +11,6 @@ console_error_panic_hook = "0.1.7"
 wasm-bindgen = "0.2.83"
 wasm-bindgen-futures = "0.4.33"
 web-sys = { version = "0.3.60", features = ["Headers", "Request", "RequestInit", "RequestMode", "Response", "ResponseInit"] }
+
+[profile.release]
+lto = true
