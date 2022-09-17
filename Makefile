@@ -9,4 +9,7 @@ build/deno_rust_wasm.js: target/wasm32-unknown-unknown/release/deno_rust_wasm.wa
 run: build/deno_rust_wasm.js
 	deno run --allow-read --allow-net --allow-env src/index.ts
 
-.PHONY: run
+test: build/deno_rust_wasm.js
+	deno test --allow-read --allow-net tests/integration.ts
+
+.PHONY: run test
